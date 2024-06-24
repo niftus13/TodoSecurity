@@ -13,6 +13,7 @@ import org.cbox.todo1.dto.PageResponceDTO;
 import org.cbox.todo1.dto.TodoDTO;
 import org.cbox.todo1.service.TodoService;
 import org.springframework.data.domain.jaxb.SpringDataJaxb.PageRequestDto;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,6 +39,7 @@ public class TodoController {
     }
 
 
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_USER')")
     @GetMapping("/list")
     public PageResponceDTO<TodoDTO> getList(PageRequestDTO pageRequestDTO){
 
