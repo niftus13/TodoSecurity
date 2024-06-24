@@ -12,7 +12,6 @@ import org.cbox.todo1.dto.PageRequestDTO;
 import org.cbox.todo1.dto.PageResponceDTO;
 import org.cbox.todo1.dto.TodoDTO;
 import org.cbox.todo1.service.TodoService;
-import org.springframework.data.domain.jaxb.SpringDataJaxb.PageRequestDto;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +19,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @RestController
